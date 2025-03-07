@@ -12,6 +12,10 @@ fn main() {
     println!("{:?}", user2);
     println!("{}, {}", user1.username, user1.email);
 
+    // Tuple structs:
+    //let color1 = Color(0, 0, 0);
+    let point = Point2D(2,3);
+    println!("{}, {}", point.0, point.1);
 }
 
 #[derive(Debug)]
@@ -30,3 +34,10 @@ fn make_user(username: String, email: String) -> User {
         active: true,
     }
 }
+
+// tuple structs
+struct Color(i32, i32, i32);
+
+#[derive(Debug)]
+struct Point2D(i32, i32);
+struct Point3D(i32, i32, i32);
